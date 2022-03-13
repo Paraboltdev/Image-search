@@ -1,0 +1,76 @@
+.App {
+    text-align: center;
+  }
+   .container{
+     margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+   }
+ 
+  
+ 
+  .form_div{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 10px;
+  }
+  
+  .input_pics{
+    height: 30px;
+    width: 250px;
+    position: relative;;
+  }
+  
+  .btn_search{
+    font-size: 28px;
+    position: absolute;
+    cursor: pointer;
+    margin-left: -30px;
+    margin-top: 4px;
+  }
+  
+  .grid_div{
+   
+    display:flex ;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    justify-content:center;
+    align-items: center;
+    flex-wrap: wrap;
+   
+    
+  }
+  
+
+ 
+ 
+  
+  
+  .no_match{
+    display:flex;
+    justify-content: center;
+    align-content: center;
+    
+    font-size: 2em;
+    margin-top: 400px;
+  }
+   
+  
+  
+    
+  @media (max-width:600px){
+    .grid_div{
+        display:grid;
+      grid-template-columns: 1fr;
+      justify-content: center;
+      align-items: center;
+      
+    }
+  
+    .form_div >form{
+        display:grid;
+        justify-content: center;
+        align-items: center;
+    }
+  }

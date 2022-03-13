@@ -1,0 +1,62 @@
+.App {
+  text-align: center;
+}
+ 
+.header{
+  display: flex;
+  align-items: center;
+  justify-content:space-around;
+  font-size: 2em;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+.header_by{
+  font-size: 20px;
+  
+}
+.form_div{
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.input_pics{
+  height: 30px;
+  width: 250px;
+  position: relative;;
+}
+
+.btn_search{
+  font-size: 28px;
+  position: absolute;
+  cursor: pointer;
+  margin-left: -30px;
+  margin-top: 4px;
+}
+
+.grid_div{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  justify-content:space-between;
+  align-items: center;
+  flex-wrap: wrap;
+ 
+  
+}
+
+
+  
+@media (max-width:600px){
+  .grid_div{
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .form_div{
+      display:grid;
+      justify-content: center;
+      align-items: center;
+  }
+}

@@ -1,0 +1,24 @@
+.pic_div{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    
+}
+.pic_img{
+    border-radius: 15px;
+    background-color: white;
+    box-shadow: 5px 5px 10px 5px grey;
+}
+.info_div{
+    margin-left: 20px;
+    font-size: 1.2rem;
+}
+.info_div>p{
+   
+    color: rgb(12, 12, 12);
+    margin-bottom: 50px;
+    padding-bottom: 20px;
+}
