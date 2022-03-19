@@ -10,16 +10,15 @@ import { createClient } from "pexels";
 import { Spinner } from "./Spinner";
 import HttpRequest from "../Helpers/HttpRequest";
 
-export function HomePage() {
-  const [text, setText] = useState("");
+export function HomePage({search}) {
   const [result, setResult] = useState([]);
+  const [text, setText] = useState("");
   const [photos, setPhotos] = useState([]);
+  const [hasmore, setHasmore] = useState(true);
   const [count, setCount] = useState();
   const [isLoading, setIsLoading] = useState(null);
-  const [hasmore, setHasmore] = useState(true);
 
-  const [query, setQuery] = useSearchParams();
-  const search = query.get("search");
+ 
 
   const [pageNumber, setPageNumber] = useState(1);
 
@@ -28,6 +27,7 @@ export function HomePage() {
   };
   const handleSubmit = (e) => {
     e.preventDefault();
+    
     setText(e.target.value);
   };
 
@@ -58,7 +58,9 @@ export function HomePage() {
     
   }, [search, pageNumber]);
 
-  if (photos.length === 0) {
+  
+
+  if (!isLoading && photos.length === 0) {
     return <p className="no_match">No matches</p>;
   }
 
@@ -68,6 +70,7 @@ export function HomePage() {
         dataLength={photos.length}
         next={() => setPageNumber((prevPageNumber) => prevPageNumber + 1)}
         hasMore={hasmore}
+       
        
         
       >
