@@ -11,6 +11,8 @@
     border-radius: 15px;
     background-color: white;
     box-shadow: 5px 5px 10px 5px grey;
+    width: 90%;
+    height: auto;
 }
 .info_div{
     margin-left: 20px;

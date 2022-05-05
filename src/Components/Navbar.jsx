@@ -15,6 +15,10 @@ const Navbar = () => {
         <Link to="/">
           <h1>C-image search</h1>
         </Link>
+
+
+
+        
       </div>
 
       <div className="search_input_nav">
@@ -34,7 +38,7 @@ const Navbar = () => {
         </form>
       </div>
 
-      <button className="btn-upload">Login</button>
+      
     </div>
   );
 };

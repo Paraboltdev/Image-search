@@ -12,7 +12,7 @@ export function Pictures() {
 
   const pexelsKey = process.env.REACT_APP_PEXELS_KEY;
 
-  const pexelsUrl = "https://api.pexels.com/v1/photos/";
+ 
   const client = createClient(pexelsKey);
 
   const { photoId } = useParams();
@@ -41,7 +41,8 @@ export function Pictures() {
                     alt={pics.alt}
                 />
         <p>
-          <b>Photographer:</b> {pics.photographer}{" "}
+          <b>Photographer:</b> {pics.photographer}
+          
         </p>
       </div>
     </div>

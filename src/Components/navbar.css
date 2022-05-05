@@ -3,7 +3,7 @@
   justify-content: space-around;
   align-items: center;
 
-  background-color: rgb(7, 7, 7);
+  background-color: rgba(7, 7, 7, 0.973);
 }
 
 .logo {
@@ -17,6 +17,24 @@
     color: white;
     text-decoration: none;
 }
+.nav_list{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+}
+li{
+  list-style: none;
+  margin-left: 15px;
+}
+
+.btn_search{
+  font-size: 35px;
+  position: absolute;
+  cursor: pointer;
+  margin-left: -45px;
+  margin-top: 15px;
+}
 
 .search_input_nav{
     
@@ -28,12 +46,7 @@
   height: 50px;
   border-radius: 5px;
   background-color: rgb(247, 244, 241);
-  color: black;
+  color: rgb(0, 0, 0);
   font-size: 1.5rem;
 }
-.btn-upload:hover {
-  transition: all 0.5s ease;
-  background-color: black;
-  color: rgb(244, 247, 250);
-  border: solid 2px white;
-}
+

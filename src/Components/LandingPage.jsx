@@ -1,15 +1,18 @@
-import React from 'react'
-import { useSearchParams } from 'react-router-dom';
-import { HomePage } from './HomePage'
+import React from "react";
+import { useSearchParams } from "react-router-dom";
+import { useDebounce } from "../hooks/useDebounce";
+
+import { HomePage } from "./HomePage";
 
 const LandingPage = () => {
-    const [query, setQuery] = useSearchParams();
+  const [query, setQuery] = useSearchParams();
   const search = query.get("search");
+  const debounceSearch = useDebounce(search, 500);
   return (
     <div>
-        <HomePage key={search} search={search}/>
+      <HomePage key={debounceSearch} search={debounceSearch} />
     </div>
-  )
-}
+  );
+};
 
-export default LandingPage
+export default LandingPage;

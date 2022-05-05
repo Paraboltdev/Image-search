@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { FaSearch } from "react-icons/fa";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import "./searchbar.css";
-import multiImg from "../assets/sunset.jpg";
+
 
 export function Searchbar() {
   const [text, setText] = useState("");
@@ -16,7 +16,10 @@ export function Searchbar() {
   }, [search]);
 
   const handleSubmit=(e)=>{
+    
+    setText("")
       e.preventDefault()
+
       navigate("?search=" + text);
 
   }
@@ -34,7 +37,10 @@ export function Searchbar() {
           value={search ?? ""}
           autoFocus
         />
-        <FaSearch className="btn_search"  type="submit" />
+        <div>
+
+        <FaSearch className="btn_search" />
+        </div>
       </form>
     </div>
   );
