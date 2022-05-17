@@ -84,7 +84,7 @@
     margin-left: 280px;
     margin-top: -37px;
   }
-  
+}  
 
   @media (max-width:370px){
     .input-search {
@@ -100,7 +100,7 @@
     }
     
   
-  }
+  
   .btn_search {
     font-size: 25px;
     position: absolute;

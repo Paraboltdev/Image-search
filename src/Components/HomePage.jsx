@@ -35,14 +35,14 @@ export function HomePage({ search }) {
 
     HttpRequest(searchUrl)
       .then((data) => {
-        console.log(data);
+        
         setResult(data.photos);
         setPhotos((prevPhotos) => prevPhotos.concat(data.photos));
         setIsLoading(false);
         setHasmore(data.page < data.total_results);
       })
       .catch((err) => console.log(err));
-    console.log(photos);
+
   }, [search, pageNumber]);
 
   if (!isLoading && photos.length === 0) {
