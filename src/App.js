@@ -19,7 +19,7 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<LandingPage />} />
+          <Route path="/Imagesearch.github.io" element={<LandingPage />} />
           <Route path="/photo/:photoId" element={<Pictures />} />
           
           <Route path="*" element={<NotFound />} />

@@ -16,7 +16,7 @@ export function Pictures() {
   const client = createClient(pexelsKey);
 
   const { photoId } = useParams();
-  console.log({ photoId });
+
 
   useEffect(() => {
     HttpRequest('photos/' + photoId)

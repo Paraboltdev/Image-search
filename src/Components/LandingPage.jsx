@@ -7,7 +7,7 @@ import { HomePage } from "./HomePage";
 const LandingPage = () => {
   const [query, setQuery] = useSearchParams();
   const search = query.get("search");
-  const debounceSearch = useDebounce(search, 500);
+  const debounceSearch = useDebounce(search, 700);
   return (
     <div>
       <HomePage key={debounceSearch} search={debounceSearch} />
